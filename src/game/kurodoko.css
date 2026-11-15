@@ -1,0 +1,121 @@
+/* ════════════════════════════════════════════════════════════════
+   田鼠挖洞（Kurodoko）—— 游戏专用皮肤
+   地面与洞穴：白格为暖土，黑格为深洞，数字是地面上的标记。
+   ════════════════════════════════════════════════════════════════ */
+
+:root {
+  --kd-hole: #3a2f2a;
+  --kd-hole-dark: #2c2320;
+  --kd-ground: #f4ead2;
+  --kd-ground-warm: #f8f0dc;
+  --kd-empty: #fbf7ee;
+  --kd-board: #e6ddc9;
+  --kd-board-line: #d4cbb9;
+  --kd-ink: #2e2a24;
+}
+
+.board-svg .kd-board-bg {
+  fill: var(--kd-board);
+  stroke: var(--kd-board-line);
+  stroke-width: 1.5;
+}
+
+.board-svg .kd-cell {
+  stroke: rgba(46, 42, 36, 0.1);
+  stroke-width: 1;
+  pointer-events: none;
+}
+
+.board-svg .kd-cell.empty {
+  fill: var(--kd-empty);
+}
+
+.board-svg .kd-cell.white {
+  fill: var(--kd-ground);
+}
+
+.board-svg .kd-cell.white.clue {
+  fill: var(--kd-ground-warm);
+}
+
+.board-svg .kd-cell.black {
+  fill: var(--kd-hole);
+  stroke: rgba(255, 255, 255, 0.06);
+}
+
+.board-svg .kd-cell.black.clue {
+  fill: var(--kd-hole-dark);
+}
+
+.board-svg .kd-cell.given {
+  stroke: rgba(46, 42, 36, 0.38);
+  stroke-width: 1.6;
+}
+
+.board-svg .kd-hole {
+  fill: rgba(0, 0, 0, 0.35);
+  pointer-events: none;
+}
+
+.board-svg .kd-clue {
+  fill: var(--kd-ink);
+  font-family: var(--mono);
+  font-weight: 700;
+  text-anchor: middle;
+  dominant-baseline: central;
+  pointer-events: none;
+}
+
+.board-svg .kd-clue.on-black {
+  fill: #fffdf8;
+}
+
+.board-svg .kd-cell.adjacent {
+  stroke: #b4552b;
+  stroke-width: 2;
+}
+
+.board-svg .kd-error {
+  fill: rgba(194, 59, 46, 0.12);
+  stroke: var(--error);
+  stroke-width: 2.2;
+  stroke-dasharray: 5 3;
+  pointer-events: none;
+}
+
+.board-svg .cell-hit {
+  pointer-events: all;
+}
+
+.board-svg .cell-hit:hover {
+  fill: rgba(31, 111, 92, 0.16);
+}
+
+/* —— 自定义题板：数字色块 —— */
+.custom-cell.r1 {
+  background: hsl(150 32% 90%);
+}
+.custom-cell.r2 {
+  background: hsl(35 44% 90%);
+}
+.custom-cell.r3 {
+  background: hsl(210 36% 90%);
+}
+.custom-cell.r4 {
+  background: hsl(280 28% 91%);
+}
+.custom-cell.r5 {
+  background: hsl(0 36% 91%);
+}
+.custom-cell.r6 {
+  background: hsl(180 30% 89%);
+}
+.custom-cell.r7 {
+  background: hsl(60 36% 90%);
+}
+.custom-cell.r8 {
+  background: hsl(320 26% 91%);
+}
+.custom-cell.r9 {
+  background: hsl(105 26% 90%);
+}
